@@ -133,7 +133,6 @@ section{
 /* left right Animation */
 .text-left-right span { animation: left-right 2s infinite alternate }
 @keyframes left-right {
-    from { opacity: 0 }
     16% { transform: skew(-14deg) }
     33% { transform: skew(12deg) }
     49% { transform: skew(-8deg) }
