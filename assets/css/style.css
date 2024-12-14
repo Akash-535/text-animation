@@ -1,0 +1,142 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+.custom-text{
+    font-size: 50px;
+    font-weight: 700;
+    color: skyblue;      
+}
+.pt-6{
+    padding-top: 24px;
+}
+/* Water Wave Animation */
+.water-wave span{
+    animation: waterWave .2s linear infinite
+}
+
+@keyframes waterWave {
+    50% { transform: skewY(1deg) skewX(-1deg) scale(1.06) }
+}
+
+/* Typing Animation */
+
+.typing {
+    width: 430px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #7E2EA0;
+    animation: typing 2s steps(16, end) alternate infinite
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 430px; }
+}
+
+/* Magify Animation */
+.leMagnify span {
+    display: inline-block;
+    animation: leMagnify 1s infinite;
+}
+
+@keyframes leMagnify {
+    50% {
+        transform: scale(1.8);
+    }
+}
+
+/* Blur Animation */
+.blur-text span { animation: blurText 2s infinite alternate}
+@keyframes blurText {
+    from {
+        transform: scaleX(0.2) translateX(-100px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+/* Jump Animation */
+.jump-text span { animation: jump infinite 2s ease-in  }
+@keyframes jump {
+    from {
+        transform: translateY(100%) rotate(-25deg);
+        transform-origin: right;
+        opacity: 0;
+    }
+    40% {
+        transform: rotate(25deg);
+        transform-origin: right;
+    }
+    65% {
+        transform: rotate(0deg);
+        transform-origin: right;
+    }
+}
+
+/* Drop text Animation */
+.drop-bottom{
+   max-height: 200px;
+    width: 100%;
+    overflow: hidden;
+    padding: 40px;
+    text-align: center;
+   }
+.text-drop span { animation: drop 5s infinite }
+@keyframes drop {
+    from { transform-origin: left }
+    50% {
+        transform: rotate(70deg);
+        transform-origin: left
+    }
+    60% {
+        transform: rotate(90deg);
+        transform-origin: left
+    }
+    to {
+        transform: translateY(800px) rotate(60deg);
+        transform-origin: left
+    }
+}
+
+/* Abound animation */
+
+.text-abound span { animation: abound 3s infinite }
+@keyframes abound {
+      50% {
+        transform: translateY(100px);
+        animation-timing-function: ease-in;
+    }
+}
+
+/* Text pop-up Animation  */
+
+.text-pop-up span { animation-name: popUp }
+@keyframes popUp {
+    50% { transform: scale(1.5) }
+}
+
+/* Text Zoom-in-out Animation */
+
+.text-zoom-in-out span { animation: zoomIn 3s infinite alternate }
+@keyframes zoomIn {
+    from {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* left right Animation */
+.text-left-right span { animation: left-right 2s infinite alternate }
+@keyframes left-right {
+    from { opacity: 0 }
+    16% { transform: skew(-14deg) }
+    33% { transform: skew(12deg) }
+    49% { transform: skew(-8deg) }
+    66% { transform: skew(6deg) }
+    83% { transform: skew(-4deg) }
+}
