@@ -5,6 +5,12 @@ section{
     min-height: 100vh;
     flex-direction: column;
     overflow: hidden;
+    text-align: center;
+}
+.heading-text{
+    font-size: 50px;
+    font-weight: 700;
+    color: black;
 }
 .custom-text{
     font-size: 50px;
