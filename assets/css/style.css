@@ -6,11 +6,12 @@ section {
   flex-direction: column;
   overflow: hidden;
   text-align: center;
+  padding: 12px;
 }
 .heading-text {
   font-size: 50px;
   font-weight: 700;
-  color: black;
+  color: green;
 }
 .custom-text {
   font-size: 50px;
@@ -301,5 +302,15 @@ section {
   90% {
     color: black;
     text-shadow: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .custom-text,
+  .heading-text {
+    font-size: 20px;
+  }
+  .new-heading {
+    font-size: 30px !important;
   }
 }
