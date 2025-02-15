@@ -1,147 +1,305 @@
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    overflow: hidden;
-    text-align: center;
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
 }
-.heading-text{
-    font-size: 50px;
-    font-weight: 700;
-    color: black;
+.heading-text {
+  font-size: 50px;
+  font-weight: 700;
+  color: black;
 }
-.custom-text{
-    font-size: 50px;
-    font-weight: 700;
-    color: skyblue;      
+.custom-text {
+  font-size: 50px;
+  font-weight: 700;
+  color: skyblue;
 }
-.pt-6{
-    padding-top: 24px;
+.pt-6 {
+  padding-top: 24px;
 }
 /* Water Wave Animation */
-.water-wave span{
-    animation: waterWave .2s linear infinite
+.water-wave span {
+  animation: waterWave 0.2s linear infinite;
 }
 
 @keyframes waterWave {
-    50% { transform: skewY(1deg) skewX(-1deg) scale(1.06) }
+  50% {
+    transform: skewY(1deg) skewX(-1deg) scale(1.06);
+  }
 }
 
 /* Typing Animation */
 
 .typing {
-    width: 430px;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid #7E2EA0;
-    animation: typing 2s steps(16, end) alternate infinite
+  width: 430px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #7e2ea0;
+  animation: typing 2s steps(16, end) alternate infinite;
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 430px; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 430px;
+  }
 }
 
 /* Magify Animation */
 .leMagnify span {
-    display: inline-block;
-    animation: leMagnify 1s infinite;
+  display: inline-block;
+  animation: leMagnify 1s infinite;
 }
 
 @keyframes leMagnify {
-    50% {
-        transform: scale(1.8);
-    }
+  50% {
+    transform: scale(1.8);
+  }
 }
 
 /* Blur Animation */
-.blur-text span { animation: blurText 2s infinite alternate}
+.blur-text span {
+  animation: blurText 2s infinite alternate;
+}
 @keyframes blurText {
-    from {
-        transform: scaleX(0.2) translateX(-100px);
-        filter: blur(20px);
-        opacity: 0;
-    }
+  from {
+    transform: scaleX(0.2) translateX(-100px);
+    filter: blur(20px);
+    opacity: 0;
+  }
 }
 
 /* Jump Animation */
-.jump-text span { animation: jump infinite 2s ease-in  }
+.jump-text span {
+  animation: jump infinite 2s ease-in;
+}
 @keyframes jump {
-    from {
-        transform: translateY(100%) rotate(-25deg);
-        transform-origin: right;
-        opacity: 0;
-    }
-    40% {
-        transform: rotate(25deg);
-        transform-origin: right;
-    }
-    65% {
-        transform: rotate(0deg);
-        transform-origin: right;
-    }
+  from {
+    transform: translateY(100%) rotate(-25deg);
+    transform-origin: right;
+    opacity: 0;
+  }
+  40% {
+    transform: rotate(25deg);
+    transform-origin: right;
+  }
+  65% {
+    transform: rotate(0deg);
+    transform-origin: right;
+  }
 }
 
 /* Drop text Animation */
-.drop-bottom{
-   max-height: 200px;
-    width: 100%;
-    overflow: hidden;
-    padding: 40px;
-    text-align: center;
-   }
-.text-drop span { animation: drop 5s infinite }
+.drop-bottom {
+  max-height: 200px;
+  width: 100%;
+  overflow: hidden;
+  padding: 40px;
+  text-align: center;
+}
+.text-drop span {
+  animation: drop 5s infinite;
+}
 @keyframes drop {
-    from { transform-origin: left }
-    50% {
-        transform: rotate(70deg);
-        transform-origin: left
-    }
-    60% {
-        transform: rotate(90deg);
-        transform-origin: left
-    }
-    to {
-        transform: translateY(800px) rotate(60deg);
-        transform-origin: left
-    }
+  from {
+    transform-origin: left;
+  }
+  50% {
+    transform: rotate(70deg);
+    transform-origin: left;
+  }
+  60% {
+    transform: rotate(90deg);
+    transform-origin: left;
+  }
+  to {
+    transform: translateY(800px) rotate(60deg);
+    transform-origin: left;
+  }
 }
 
 /* Abound animation */
 
-.text-abound span { animation: abound 3s infinite }
+.text-abound span {
+  animation: abound 3s infinite;
+}
 @keyframes abound {
-      50% {
-        transform: translateY(100px);
-        animation-timing-function: ease-in;
-    }
+  50% {
+    transform: translateY(100px);
+    animation-timing-function: ease-in;
+  }
 }
 
 /* Text pop-up Animation  */
 
-.text-pop-up span { animation-name: popUp }
+.text-pop-up span {
+  animation-name: popUp;
+}
 @keyframes popUp {
-    50% { transform: scale(1.5) }
+  50% {
+    transform: scale(1.5);
+  }
 }
 
 /* Text Zoom-in-out Animation */
 
-.text-zoom-in-out span { animation: zoomIn 3s infinite alternate }
+.text-zoom-in-out span {
+  animation: zoomIn 3s infinite alternate;
+}
 @keyframes zoomIn {
-    from {
-        transform: scale(4);
-        opacity: 0;
-    }
+  from {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 
 /* left right Animation */
-.text-left-right span { animation: left-right 2s infinite alternate }
+.text-left-right span {
+  animation: left-right 2s infinite alternate;
+}
 @keyframes left-right {
-    16% { transform: skew(-14deg) }
-    33% { transform: skew(12deg) }
-    49% { transform: skew(-8deg) }
-    66% { transform: skew(6deg) }
-    83% { transform: skew(-4deg) }
+  16% {
+    transform: skew(-14deg);
+  }
+  33% {
+    transform: skew(12deg);
+  }
+  49% {
+    transform: skew(-8deg);
+  }
+  66% {
+    transform: skew(6deg);
+  }
+  83% {
+    transform: skew(-4deg);
+  }
+}
+
+/* ========NEW TEXT ANIMATIONS=========== */
+
+/* Text Shadow Animation */
+.text-shadow {
+  text-shadow: 5px 5px 0 red, 10px 10px 0 blue;
+  animation: text-shadow-dance 2s infinite;
+}
+
+@keyframes text-shadow-dance {
+  0%,
+  100% {
+    text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 blue;
+  }
+  50% {
+    text-shadow: -5px -5px 0 blue, -10px -10px 0 #ff005e;
+  }
+}
+
+/* Masked Text Animation */
+.masked-text {
+  color: transparent;
+  background-image: url("../images/mustang.jpg");
+  background-size: 200%; /* Enlarged for smooth animation */
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Tracking Text Animation */
+
+.tracking-text {
+  animation: tracking-out-contract 7s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    300ms infinite reverse both;
+}
+@-webkit-keyframes tracking-out-contract {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+}
+@keyframes tracking-out-contract {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+}
+
+/* Fall Text Animation  */
+
+.fall-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 100px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 100px;
+}
+.fall-text span {
+  transform-origin: bottom;
+  transform: rotateX(-85deg);
+  -webkit-transform-origin: bottom;
+  -webkit-transform: rotateX(-85deg);
+  animation: getUp 7s infinite;
+}
+
+@keyframes getUp {
+  10%,
+  50% {
+    transform: rotateX(0);
+  }
+  0%,
+  60%,
+  100% {
+    transform: rotateX(-85deg);
+  }
+}
+
+/* Glow Text Animation */
+
+.glow-text span {
+  text-transform: uppercase;
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    color: white;
+    text-shadow: 0 0 10px #0652dd, 0 0 50px #0652dd, 0 0 100px #0652dd;
+  }
+
+  10%,
+  90% {
+    color: black;
+    text-shadow: none;
+  }
 }
